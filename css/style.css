@@ -172,6 +172,17 @@ textarea {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+@media (max-width: 600px) {
+  .photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.link-section img:hover {
+  transform: scale(1.1);
+}
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -189,8 +200,11 @@ img {
   margin: 20px auto;
   padding: 0.2%;
 }
-
+h2 {
+  font-size: 200%;
+}
 p {
+  font-style: revert;
   font-size: 200%;
 }
 a {
@@ -198,6 +212,11 @@ a {
   font-size: 200%;
   color: white;
   margin: 20px auto;
+}
+.photos {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
 }
 
 #minigun-hug {
@@ -208,16 +227,37 @@ a {
 
 
 .link-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
   gap: 50px;
 }
+
+.link-section a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  padding: 40px;
+  margin: 20px 0;
+}
+
+#about { background: #222; }
+#photos { background: #333; }
+#links { background: #444; }
+#story { background: #222; }
+footer { background: #111; padding: 20px; }
 
 
 .link-section img {
   width: 200px;
   display: block;
   margin: 20px auto;
+  transition: transform 0.3s ease;
 }
 
 @media print {
