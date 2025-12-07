@@ -1,0 +1,47 @@
+
+body {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-size: 200%;
+    font-family: Verdana, sans-serif;
+}
+.links-section {
+    padding: 0 40px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center; /* Hard to notice but centers the text better */
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 100%;
+    gap: 30px;
+    margin: 50px 50px 100px;
+    background-color: rgba(26, 26, 26, 0.86);
+    width: 100%;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.links-section img {
+    display: flex;
+    justify-self: center;
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    #links-section {
+        flex-direction: column;
+    }
+}
+.unique-text {
+    color: #ffd700;
+    font-size: 50%;
+}
+.unusual-text {
+    color: #8650ac;
+    font-size: 50%;
+}

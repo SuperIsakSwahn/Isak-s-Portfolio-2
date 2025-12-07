@@ -1,0 +1,134 @@
+#home-page-text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 100%;
+}
+
+h2 {
+  font-size: 100%;
+  max-width: 80%;
+  display: flex;
+  justify-self: center;
+}
+
+h3 {
+  font-size: 80%;
+  max-width: 80%;
+  display: flex;
+  justify-self: center;
+}
+
+#purchase-grid {
+  display: grid;
+  justify-self: center;
+  background-color: #1a1a1a;
+  width: 90%;
+  height: fit-content;
+}
+
+#purchase-grid img {
+  max-height: 130px;
+  width: auto;
+  cursor: pointer;
+}
+
+
+#products-yellow img {
+  color: gold;
+}
+#products-purple img {
+  color: #8650ac;
+}
+
+#products-yellow,
+#products-purple {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, 135px);
+  gap: 15px;
+  margin: 15px;
+}
+
+
+#products-yellow p,
+#products-purple p {
+  justify-self: center;
+  font-size: 50%;
+}
+
+#products-purple img,
+#products-yellow img {
+  border: 3px solid;
+  border-radius: 15px;
+}
+
+
+#checkout-text {
+  font-size: 60%;
+}
+
+#payment-section {
+  display: flex;
+  position: relative;
+  justify-self: end;
+  margin: 10px;
+  vertical-align: center;
+  flex-direction: column;
+  background-color: #464646;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#offer-message {
+  display: none;
+  background-color: gold;
+  width: 80%;
+}
+
+#shopping_cart:checked + #offer-message {
+  display: block;
+}
+
+#shopping_cart:active {
+  background-color: grey;
+}
+
+
+
+#payment-section:active {
+  background-color: grey;
+}
+
+#unusuals-section, #scrapweapons-section {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+}
+
+
+
+#products-purple input:checked + label img,
+#products-yellow input:checked + label img {
+  background-color: gray;
+}
+
+
+@media (max-width: 600px) {
+  #payment-section {
+    justify-self: center;
+    position: static;
+  }
+  #offer-message {
+    visibility: visible;
+    display: none;
+    width: 100%;
+  }
+
+  #shopping_cart:checked + #offer-message {
+    display: block;
+  }
+}
