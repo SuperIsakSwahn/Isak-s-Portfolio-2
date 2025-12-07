@@ -1,17 +1,129 @@
-#icon-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+* {
+  box-sizing: border-box;
 }
-p {
+
+html {
   color: white;
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: #1a1a1a;
+  text-align: center;
 }
-#intro {
-  margin: 20px;
+
+html, body {
+  overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
-  body {
-    font-size: 120%;
+  .photos, .link-section {
+    grid-template-columns: 1fr !important;
+    max-width: 350px;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+
+  .photos img {
+    max-width: 100%;
+    height: auto;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+  }
+
+  #minigun-hug {
+    width: 100%;
+    padding: 0;
+    transform: none;
+  }
+}
+
+
+a:hover {
+  transform: scale(1.1);
+  transition: 300ms ease;
+  font-style: initial;
+}
+a {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  display: block;
+  font-size: 200%;
+  color: white;
+  margin: 20px auto;
+}
+img {
+  margin: 20px auto;
+  padding: 0.2%;
+}
+
+h2 {
+  font-size: 200%;
+  font-style: oblique;
+}
+
+p {
+  font-style: revert;
+  font-size: 200%;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.photos img {
+  padding: 30px;
+}
+
+
+.link-section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 50px;
+}
+
+.link-section a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  padding: 40px;
+  margin: 20px 0;
+}
+
+#about {
+  background: #222;
+}
+
+#photos {
+  max-width: 100%;
+  background: #333;
+}
+
+
+#links {
+  background: #444;
+}
+
+#story {
+  background: #222;
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+}
+
+
+.link-section img {
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
 }
